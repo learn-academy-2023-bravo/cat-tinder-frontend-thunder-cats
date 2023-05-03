@@ -4,7 +4,7 @@ import Home from "../pages/Home.js"
 describe("<Home />", () => {
   it("renders without crashing", () => {
    
-    render(<Home />)
+    render(<Home/>)
     const element = screen.getByText("Home Page")
     expect(element).toBeInTheDocument()
   })
