@@ -1,5 +1,13 @@
 import React from "react"
-import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText } from "reactstrap"
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  CardText,
+} from "reactstrap"
+import { NavLink } from "react-router-dom"
 
 const CatIndex = ({ cats }) => {
   return (
@@ -12,7 +20,7 @@ const CatIndex = ({ cats }) => {
               width: "18rem",
             }}
           >
-            <img alt= "Sample" src={cat.image} />
+            <img alt="Sample" src={cat.image} />
             <CardBody>
               <CardTitle tag="h5">{cat.name}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -22,7 +30,7 @@ const CatIndex = ({ cats }) => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card‘s content.
               </CardText>
-              <Button>see more details</Button>
+              <NavLink to={`/catshow/${cat.id}`}>see more details</NavLink>
             </CardBody>
           </Card>
         )
