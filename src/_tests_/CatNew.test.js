@@ -35,8 +35,4 @@ describe("<CatNew />", () => {
     expect(imageInput).toBeInTheDocument()
   })
 
-  // it ('a frm with entries for name, age, hobbies, image', () => {
-  //   const formName = screen.getByLabelText( /name/i)
-  //   expect(formName.getAttribute("For")).toEqual("Name")
-  // })
 })

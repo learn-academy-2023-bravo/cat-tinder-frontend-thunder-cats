@@ -8,20 +8,20 @@ import catLogo from '../assets/felinefinder.png'
     return (
       <Nav className="header" pills >
         <NavItem>
-          <NavLink to="/">
+          <NavLink className={cat-logo} to="/">
             <img
               src={catLogo}
-              alt="Cat Tinder logo with two cats hugging"
+              alt="Cat outline"
               className="cat-logo"
               />
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/catIndex">Meet the Cats!</NavLink>
+          <NavLink to="/catIndex">Meow Now!</NavLink>
         </NavItem>
         <NavItem>
           <NavLink to="/catnew">
-            Add a Cat
+            Add a Cat!
           </NavLink>
         </NavItem>
       </Nav>
