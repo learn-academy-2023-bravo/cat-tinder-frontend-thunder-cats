@@ -7,7 +7,7 @@ describe("<Footer />", () => {
    
     render(<BrowserRouter>
           <Footer />
-        </BrowserRouter>,
+        </BrowserRouter>
         )
     const element = screen.getByText("This is the Footer")
     expect(element).toBeInTheDocument()
