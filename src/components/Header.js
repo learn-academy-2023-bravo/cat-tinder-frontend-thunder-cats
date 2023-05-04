@@ -4,6 +4,7 @@ import catLogo from '../assets/felinefinder.png'
 
 
   const Header = () => {
+    
     return (
       <Nav className="header" pills >
         <NavItem>
