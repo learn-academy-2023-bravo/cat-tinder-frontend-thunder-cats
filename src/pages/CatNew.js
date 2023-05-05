@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { Form, FormGroup, Input, Label, Button } from "reactstrap"
+import "./CatNew.css"
 
 const CatNew = ({ createCat }) => {
   const navigate = useNavigate();
@@ -16,15 +17,16 @@ const CatNew = ({ createCat }) => {
     // Spread operator make a copy of state object
     // e.target.name will give us the key we are updating based on input
     // e.target.value will be the new value in state
-    setNewCat({ ...newCat, [e.target.name]: e.target.value });
+    setNewCat({ ...newCat, [e.target.name]: e.target.value })
   };
 
   const handleSubmit = () => {
     createCat(newCat)
     navigate("/catindex")
   }
+
   return (
-    <>
+    <div className="container my-5">
       <Form>
         <FormGroup>
           <Label for="cat-name">Name</Label>
@@ -49,7 +51,7 @@ const CatNew = ({ createCat }) => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="cat-breed">breed</Label>
+          <Label for="cat-breed">Breed</Label>
           <Input
             id="cat-breed"
             name="breed"
@@ -81,9 +83,9 @@ const CatNew = ({ createCat }) => {
             value={newCat.image}
           />
         </FormGroup>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button color="primary" onClick={handleSubmit}>Submit</Button>
       </Form>
-    </>
+    </div>
   )
 }
 

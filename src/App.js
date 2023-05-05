@@ -13,11 +13,10 @@ import "./App.css"
 
 function App() {
   const [cats, setCats] = useState(mockCats)
-  
+
   const createCat = (createdCat) => {
     console.log(createdCat)
-  }
-  
+  };
 
   return (
     <>
