@@ -14,14 +14,9 @@ import "./App.css"
 function App() {
   const [cats, setCats] = useState(mockCats)
 
-  const createCat = (createdCat) => {
-    console.log(createdCat)
-  }
+  const createCat = (createdCat) => {}
 
-  const updateCat = (cat, id) => {
-    console.log("cat:", cat)
-    console.log("id:", id)
-  }
+  const updateCat = (cat, id) => {}
 
   return (
     <>

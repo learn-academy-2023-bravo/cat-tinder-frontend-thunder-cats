@@ -4,7 +4,7 @@ import CatEdit from "../pages/CatEdit"
 
 describe("<CatEdit />", () => {
   it("renders without crashing", () => {
-    render(<CatEdit />)
+    render(<CatEdit/>)
     const element = screen.getByText("Home Page")
     expect(element).toBeInTheDocument()
   })
