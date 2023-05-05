@@ -8,15 +8,46 @@ import CatNew from "./pages/CatNew"
 import CatEdit from "./pages/CatEdit"
 import NotFound from "./pages/NotFound"
 import Footer from "./components/Footer"
-import mockCats from "./mockCats"
+import { useEffect } from "react"
 import "./App.css"
 
 function App() {
-  const [cats, setCats] = useState(mockCats)
+  const [cats, setCats] = useState([])
 
-  const createCat = (createdCat) => {}
+  useEffect(() => {
+    readCat()
+  }, [])
 
-  const updateCat = (cat, id) => {}
+  const readCat = () => {
+    fetch("http://localhost:3000/cats")
+      .then((response) => response.json())
+      .then((payload) => {
+        setCats(payload)
+      })
+      .catch((error) => console.log(error))
+  }
+
+  const createCat = (createdCat) => {
+    fetch("http://localhost:3000/cats", {
+      body: JSON.stringify(createdCat),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then(() => readCat())
+      .catch((error) => console.log("cat create error:", error))
+  }
+
+  const updateCat = (updatedCat, id) => {
+    fetch(`https://localhost:3000/cats/${id}`, {
+      body: JSON.stringify(updatedCat),
+      headers: { "Content-Type": "application/json" },
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then(() => readCat())
+      .catch((error) => console.log("cat update error:", error))
+  }
 
   return (
     <>
