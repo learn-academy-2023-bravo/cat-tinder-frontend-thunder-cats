@@ -22,7 +22,13 @@ const CatShow = ({ cats, deleteCat }) => {
           <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
             <Button color="primary">Edit Cat Profile</Button>
           </NavLink>
-          <Button color="primary" onClick={handleSubmit}>
+          <Button
+            color="primary"
+            onClick={() => {
+              handleSubmit()
+              window.location.reload()
+            }}
+          >
             Delete Cat Profile
           </Button>
         </>
