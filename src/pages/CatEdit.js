@@ -19,6 +19,7 @@ const CatEdit = ({ cats, updateCat }) => {
   }
 
   const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     updateCat(editCat, currentCat.id)
     navigate(`/catshow/${id}`)
