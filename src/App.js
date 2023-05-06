@@ -39,7 +39,7 @@ function App() {
   }
 
   const updateCat = (updatedCat, id) => {
-    fetch(`https://localhost:3000/cats/${id}`, {
+    fetch(`http://localhost:3000/cats/${id}`, {
       body: JSON.stringify(updatedCat),
       headers: { "Content-Type": "application/json" },
       method: "PATCH",
