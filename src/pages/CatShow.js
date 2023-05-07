@@ -1,16 +1,16 @@
-import React from "react"
-import { useParams, NavLink, useNavigate } from "react-router-dom"
-import { Button } from "reactstrap"
+import React from "react";
+import { useParams, NavLink, useNavigate } from "react-router-dom";
+import { Button } from "reactstrap";
 
 const CatShow = ({ cats, deleteCat }) => {
-  const { id } = useParams()
-  const navigate = useNavigate()
-  let currentCat = cats.find((cat) => cat.id === +id)
+  const { id } = useParams();
+  const navigate = useNavigate();
+  let currentCat = cats.find((cat) => cat.id === +id);
 
   const handleSubmit = () => {
-    deleteCat(id)
-    navigate("/catindex")
-  }
+    deleteCat(id);
+    navigate("/catindex");
+  };
   return (
     <main>
       {currentCat && (
@@ -25,8 +25,8 @@ const CatShow = ({ cats, deleteCat }) => {
           <Button
             color="primary"
             onClick={() => {
-              handleSubmit()
-              window.location.reload()
+              handleSubmit();
+              window.location.reload();
             }}
           >
             Delete Cat Profile
@@ -34,7 +34,7 @@ const CatShow = ({ cats, deleteCat }) => {
         </>
       )}
     </main>
-  )
-}
+  );
+};
 
-export default CatShow
+export default CatShow;

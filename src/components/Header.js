@@ -23,7 +23,7 @@ const Header = () => {
         </NavItem>
       </Nav>
     </Navbar>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

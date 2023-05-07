@@ -1,7 +1,7 @@
-import React from "react"
-import { Container, Row, Col } from "reactstrap"
-import { Link } from "react-router-dom"
-import "./home.css"
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
+import "./home.css";
 
 const Home = () => {
   return (
@@ -57,7 +57,7 @@ const Home = () => {
         </Container>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
