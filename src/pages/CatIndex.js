@@ -1,7 +1,16 @@
 import React from "react";
-import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText, Row, Col } from "reactstrap"
-import { NavLink } from "react-router-dom"
-import "./catindex.css"
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  CardText,
+  Row,
+  Col,
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
+import "./catindex.css";
 
 const CatIndex = ({ cats }) => {
   return (
@@ -28,12 +37,11 @@ const CatIndex = ({ cats }) => {
                 </CardBody>
               </Card>
             </Col>
-          )
+          );
         })}
       </Row>
     </main>
-  )
-}
+  );
+};
 
-export default CatIndex
-
+export default CatIndex;
