@@ -5,7 +5,7 @@ import { Button } from "reactstrap";
 const CatShow = ({ cats, deleteCat }) => {
   const { id } = useParams();
   const navigate = useNavigate();
-  let currentCat = cats.find((cat) => cat.id === +id);
+  let currentCat = cats?.find((cat) => cat.id === +id);
 
   const handleSubmit = () => {
     deleteCat(id);
@@ -25,8 +25,7 @@ const CatShow = ({ cats, deleteCat }) => {
           <Button
             color="primary"
             onClick={() => {
-              handleSubmit();
-              window.location.reload();
+              handleSubmit();   
             }}
           >
             Delete Cat Profile
