@@ -1,23 +1,23 @@
 import React from "react";
-import { Nav, Navbar, NavItem } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
 import catLogo from "../assets/felinefinder.png";
 import "./header.css";
 
 const Header = () => {
   return (
-    <Navbar expand="md" className="header">
-      <NavLink className="navbar-brand" to="/">
+    <Navbar color="light" light expand="md" className="header">
+      <NavbarBrand tag={Link} to="/">
         <img src={catLogo} alt="Cat outline" className="header-cat-logo" />
-      </NavLink>
+      </NavbarBrand>
       <Nav className="ml-auto" navbar>
         <NavItem>
-          <NavLink to="/catIndex" className="nav-link">
+          <NavLink to="/catIndex" className="btn-custom">
             See Cats
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/catNew" className="nav-link">
+          <NavLink to="/catNew" className="btn-custom">
             Sign Up
           </NavLink>
         </NavItem>
@@ -27,3 +27,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
