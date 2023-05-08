@@ -11,9 +11,9 @@ const NotFound = () => {
         <p className="notfound-message">
           We couldn't find any cats here. Maybe try searching for them instead?
         </p>
-        <Link to="/catindex">
+        <Navlink to="/catindex">
           <Button className="notfound-btn">Search for cats</Button>
-        </Link>
+        </Navlink>
       </Container>
     </div>
 

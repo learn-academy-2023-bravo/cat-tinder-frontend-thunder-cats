@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./home.css";
 
 const Home = () => {
@@ -13,11 +13,11 @@ const Home = () => {
             <p className="lead mb-4">
               Find your new feline friend with our easy-to-use search tool.
             </p>
-            <Link to="/catindex">
+            <NavLink to="/catindex">
               <Button className="search-button" color="info" size="lg">
                 Start Search
               </Button>
-            </Link>
+            </NavLink>
           </Col>
           <Col xs="12" md="6" className="p-0">
             <div className="cat-image-container">
