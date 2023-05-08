@@ -44,7 +44,7 @@
 }
 
 .btn-custom:hover {
-  background-color: var(--accent-color);
+  background-color: red;
   color: var(--primary-color);
 } 
 

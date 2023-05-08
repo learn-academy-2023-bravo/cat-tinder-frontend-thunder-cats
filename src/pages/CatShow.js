@@ -1,31 +1,35 @@
-import React from "react";
-import { useParams, NavLink, useNavigate } from "react-router-dom";
-import { Button } from "reactstrap";
+import React from "react"
+import { useParams, NavLink, useNavigate } from "react-router-dom"
+import { Button } from "reactstrap"
 
 const CatShow = ({ cats, deleteCat }) => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  let currentCat = cats?.find((cat) => cat.id === +id);
+  const { id } = useParams()
+  const navigate = useNavigate()
+  let currentCat = cats?.find((cat) => cat.id === +id)
 
   const handleSubmit = () => {
-    deleteCat(id);
-    navigate("/catindex");
-  };
+    deleteCat(id)
+    navigate("/catindex")
+  }
   return (
     <main>
       {currentCat && (
         <>
           <img alt="cat pic" src={currentCat.image} />
           <h3>
-            {currentCat.name} likes {currentCat.hobbies}
+            {currentCat.name} is {currentCat.age} and is a {currentCat.breed}{" "}
+            and likes {currentCat.hobbies}.
           </h3>
           <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
-            <Button color="primary">Edit Cat Profile</Button>
+            <Button className="btn-primary" color="danger">
+              Edit Cat Profile
+            </Button>
           </NavLink>
           <Button
-            color="primary"
+            className="btn-primary"
+            color="danger"
             onClick={() => {
-              handleSubmit();   
+              handleSubmit()
             }}
           >
             Delete Cat Profile
@@ -33,7 +37,7 @@ const CatShow = ({ cats, deleteCat }) => {
         </>
       )}
     </main>
-  );
-};
+  )
+}
 
-export default CatShow;
+export default CatShow

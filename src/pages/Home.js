@@ -1,20 +1,20 @@
-import React from "react";
-import { Container, Row, Col, Button } from "reactstrap";
-import {  NavLink } from "react-router-dom";
-import "./home.css";
+import React from "react"
+import { Container, Row, Col, Button } from "reactstrap"
+import { NavLink } from "react-router-dom"
+import "./home.css"
 
 const Home = () => {
   return (
     <div className="home">
       <Container fluid>
         <Row>
-          <Col  className="home-content text-center my-auto">
+          <Col className="home-content text-center my-auto">
             <h1 className="display-3">Welcome to Feline Finder!</h1>
             <p className="lead mb-4">
               Find your new feline friend with our easy-to-use search tool.
             </p>
             <NavLink to="/catindex">
-              <Button className="search-button" color="info" size="lg">
+              <Button className="btn-custom" color="danger" size="lg">
                 Start Search
               </Button>
             </NavLink>
@@ -31,10 +31,7 @@ const Home = () => {
         </Row>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
-
-
-
+export default Home
