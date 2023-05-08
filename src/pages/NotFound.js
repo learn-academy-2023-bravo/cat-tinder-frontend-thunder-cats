@@ -16,6 +16,7 @@ const NotFound = () => {
         </Link>
       </Container>
     </div>
+
   );
 };
 
