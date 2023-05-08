@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import { useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 
 const CatEdit = ({ cats, updateCat }) => {
-  const { id } = useParams();
-  let currentCat = cats?.find((cat) => cat.id === +id);
+  const { id } = useParams()
+  let currentCat = cats?.find((cat) => cat.id === +id)
 
   const [editCat, setEditCat] = useState({
     name: currentCat.name,
@@ -12,18 +12,18 @@ const CatEdit = ({ cats, updateCat }) => {
     breed: currentCat.breed,
     hobbies: currentCat.hobbies,
     image: currentCat.image,
-  });
+  })
 
   const handleChange = (e) => {
-    setEditCat({ ...editCat, [e.target.name]: e.target.value });
-  };
+    setEditCat({ ...editCat, [e.target.name]: e.target.value })
+  }
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    updateCat(editCat, currentCat.id);
-    navigate(`/catshow/${id}`);
-  };
+    updateCat(editCat, currentCat.id)
+    navigate(`/catshow/${id}`)
+  }
 
   return (
     <div>
@@ -83,12 +83,12 @@ const CatEdit = ({ cats, updateCat }) => {
             value={editCat.image}
           />
         </FormGroup>
-        <Button color="primary" onClick={handleSubmit}>
+        <Button color="danger" onClick={handleSubmit}>
           Submit Updated Cat
         </Button>
       </Form>
     </div>
-  );
-};
+  )
+}
 
-export default CatEdit;
+export default CatEdit

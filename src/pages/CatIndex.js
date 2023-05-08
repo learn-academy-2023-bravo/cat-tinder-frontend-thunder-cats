@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Card,
   CardBody,
@@ -8,9 +8,9 @@ import {
   CardText,
   Row,
   Col,
-} from "reactstrap";
-import { NavLink } from "react-router-dom";
-import "./catindex.css";
+} from "reactstrap"
+import { NavLink } from "react-router-dom"
+import "./catindex.css"
 
 const CatIndex = ({ cats }) => {
   return (
@@ -32,16 +32,16 @@ const CatIndex = ({ cats }) => {
                   </CardSubtitle>
                   <CardText>{cat.bio}</CardText>
                   <NavLink to={`/catshow/${cat.id}`}>
-                    <Button color="primary">See More Details</Button>
+                    <Button color="danger">See More Details</Button>
                   </NavLink>
                 </CardBody>
               </Card>
             </Col>
-          );
+          )
         })}
       </Row>
     </main>
-  );
-};
+  )
+}
 
-export default CatIndex;
+export default CatIndex
