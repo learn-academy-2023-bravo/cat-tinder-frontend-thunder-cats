@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Navlink } from "react-router-dom";
 import { Container, Button } from "reactstrap";
 import "./notfound.css";
 
