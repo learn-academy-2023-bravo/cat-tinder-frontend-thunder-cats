@@ -1,55 +1,33 @@
 .footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 0;
-    z-index: 2;
-    height: 100px;
-  }
-  
-  .footerlogo {
-    position: absolute;
-    top: -120px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: auto;
-  }
-  
-  .text-muted {
-    font-size: 12px;
-  }
-  
-  .container {
-    max-width: 1;
-  }
-  
-  .footer-links {
-    position: relative;
-  z-index: 1;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .footer-link {
-    color: var(--secondary-color);
-    text-decoration: none;
-    border: 1px solid var(--secondary-color);
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .footer-link:hover {
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
-  }
-  
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background-color: #f5f5f5;
+}
+
+.footer .container {
+  margin-bottom: 0; /* Remove default margin to prevent overlap with other content */
+  padding: 10px;
+}
+
+.footer img {
+  width: 250px; /* Adjust the size of the logo as needed */
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer .text-muted {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
