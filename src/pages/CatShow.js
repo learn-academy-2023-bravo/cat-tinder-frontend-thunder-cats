@@ -11,29 +11,36 @@ const CatShow = ({ cats, deleteCat }) => {
     deleteCat(id)
     navigate("/catindex")
   }
+
   return (
-    <main>
+    <main className="cat-show-container">
       {currentCat && (
         <>
-          <img alt="cat pic" src={currentCat.image} />
-          <h3>
-            {currentCat.name} is {currentCat.age} and is a {currentCat.breed}{" "}
-            and likes {currentCat.hobbies}.
-          </h3>
-          <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
-            <Button className="btn-primary" color="danger">
-              Edit Cat Profile
-            </Button>
-          </NavLink>
-          <Button
-            className="btn-primary"
-            color="danger"
-            onClick={() => {
-              handleSubmit()
-            }}
-          >
-            Delete Cat Profile
-          </Button>
+          <div className="image-container">
+            <img alt="cat pic" src={currentCat.image} className="cat-image" />
+          </div>
+          <div className="cat-info">
+            <h3 className="text-center">
+              {currentCat.name} is {currentCat.age} and is a {currentCat.breed}{" "}
+              and likes {currentCat.hobbies}.
+            </h3>
+            <div className="button-container d-flex justify-content-center gap-2">
+              <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
+                <Button className="btn-primary" color="danger">
+                  Edit Cat Profile
+                </Button>
+              </NavLink>
+              <Button
+                className="btn-primary"
+                color="danger"
+                onClick={() => {
+                  handleSubmit()
+                }}
+              >
+                Delete Cat Profile
+              </Button>
+            </div>
+          </div>
         </>
       )}
     </main>
